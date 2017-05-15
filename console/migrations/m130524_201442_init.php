@@ -16,7 +16,6 @@ class m130524_201442_init extends Migration
             'id' => $this->primaryKey(),
             'username' => $this->string()->notNull()->unique(),
             'password_hash' => $this->string()->notNull(),
-            'auth_key' => $this->string()->unique(),
             'role' => 'enum("admin","superadmin") NOT NULL',
         ], $tableOptions);
 

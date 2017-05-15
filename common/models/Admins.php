@@ -10,7 +10,6 @@ use Yii;
  * @property integer $id
  * @property string $username
  * @property string $password_hash
- * @property string $auth_key
  * @property string $role
  */
 class Admins extends \yii\db\ActiveRecord
@@ -31,9 +30,8 @@ class Admins extends \yii\db\ActiveRecord
         return [
             [['username', 'password_hash', 'role'], 'required'],
             [['role'], 'string'],
-            [['username', 'password_hash', 'auth_key'], 'string', 'max' => 255],
+            [['username', 'password_hash'], 'string', 'max' => 255],
             [['username'], 'unique'],
-            [['auth_key'], 'unique'],
         ];
     }
 
@@ -46,7 +44,6 @@ class Admins extends \yii\db\ActiveRecord
             'id' => 'ID',
             'username' => 'Username',
             'password_hash' => 'Password Hash',
-            'auth_key' => 'Auth Key',
             'role' => 'Role',
         ];
     }
