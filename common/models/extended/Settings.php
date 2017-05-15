@@ -3,16 +3,19 @@
 namespace common\models\extended;
 
 use yii;
+use common\models\AppModel;
 
-class Setting extends \common\models\Settings
+class Settings extends \common\models\Settings
 {
+    use AppModel;
+
     public static function getValueByAlias($alias)
     {
         $config = self::findOne(['alias' => $alias]);
         return $config ? $config->value : null;
     }
 
-    public static function getAllNamesValues()
+    public static function getList()
     {
         $arr = [];
 
