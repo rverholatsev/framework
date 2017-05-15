@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\extended\Setting;
+use common\models\extended\Settings;
 use backend\models\SearchSettings;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -62,7 +62,7 @@ class SettingsController extends Controller
 
     protected function findModel($id)
     {
-        if (($model = Setting::findOne($id)) !== null) {
+        if (($model = Settings::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

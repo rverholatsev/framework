@@ -2,10 +2,13 @@
 
 namespace common\models\extended;
 
+use common\models\AppModel;
 use yii;
 
 class Admins extends \common\models\Admins implements yii\web\IdentityInterface
 {
+    use AppModel;
+
     public static function findIdentity($id)
     {
         return static::findOne(['id' => $id]);
