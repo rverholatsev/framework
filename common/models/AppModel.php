@@ -2,7 +2,6 @@
 
 namespace common\models;
 
-
 trait AppModel
 {
 }
