@@ -8,19 +8,9 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="configs-form">
+<div class="settings-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= Html::tag('b', 'ID') ?>
-    <?= Html::tag('p', $model->id) ?>
-
-    <?= Html::tag('br') ?>
-
-    <?= Html::tag('b', 'Alias') ?>
-    <?= Html::tag('p', $model->alias) ?>
-
-    <?= Html::tag('br') ?>
 
     <?= $form->field($model, 'value')->textInput(['maxlength' => true]) ?>
 

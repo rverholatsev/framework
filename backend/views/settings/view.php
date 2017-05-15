@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Settings */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Configs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Settings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="configs-view">
