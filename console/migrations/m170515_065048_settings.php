@@ -2,11 +2,11 @@
 
 use yii\db\Migration;
 
-class m170515_065048_configs extends Migration
+class m170515_065048_settings extends Migration
 {
     public function up()
     {
-        $this->createTable('configs', [
+        $this->createTable('settings', [
             'id' => $this->primaryKey(),
             'alias' => $this->string()->notNull()->unique(),
             'name' => $this->string()->notNull()->unique(),
@@ -16,6 +16,6 @@ class m170515_065048_configs extends Migration
 
     public function down()
     {
-        $this->dropTable('configs');
+        $this->dropTable('settings');
     }
 }

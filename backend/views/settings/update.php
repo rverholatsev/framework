@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Configs */
+/* @var $model common\models\Settings */
 
 $this->title = 'Update Configs: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Configs', 'url' => ['index']];

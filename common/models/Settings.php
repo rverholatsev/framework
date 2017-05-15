@@ -5,21 +5,21 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "configs".
+ * This is the model class for table "settings".
  *
  * @property integer $id
  * @property string $alias
  * @property string $name
  * @property string $value
  */
-class Configs extends \yii\db\ActiveRecord
+class Settings extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'configs';
+        return 'settings';
     }
 
     /**

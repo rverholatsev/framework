@@ -4,7 +4,7 @@ namespace common\models\extended;
 
 use yii;
 
-class Configs extends \common\models\Configs
+class Setting extends \common\models\Settings
 {
     public static function getValueByAlias($alias)
     {

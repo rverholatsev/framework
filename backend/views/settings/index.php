@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\SearchConfigs */
+/* @var $searchModel backend\models\SearchSettings */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Configs';
+$this->title = 'Settings';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="configs-index">

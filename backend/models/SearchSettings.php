@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Configs;
+use common\models\Settings;
 
 /**
  * SearchConfigs represents the model behind the search form about `common\models\Configs`.
  */
-class SearchConfigs extends Configs
+class SearchSettings extends Settings
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class SearchConfigs extends Configs
      */
     public function search($params)
     {
-        $query = Configs::find();
+        $query = Settings::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

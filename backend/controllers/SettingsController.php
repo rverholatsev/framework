@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\extended\Configs;
-use backend\models\SearchConfigs;
+use common\models\extended\Setting;
+use backend\models\SearchSettings;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * ConfigsController implements the CRUD actions for Configs model.
  */
-class ConfigsController extends Controller
+class SettingsController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,7 +31,7 @@ class ConfigsController extends Controller
 
     public function actionIndex()
     {
-        $searchModel = new SearchConfigs();
+        $searchModel = new SearchSettings();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -62,7 +62,7 @@ class ConfigsController extends Controller
 
     protected function findModel($id)
     {
-        if (($model = Configs::findOne($id)) !== null) {
+        if (($model = Setting::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
